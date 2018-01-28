@@ -4,3 +4,21 @@ header {
   height: 100vh;
   background-image: -webkit-linear-gradient(-45deg, $orange 60%, rgba(0, 0, 0, 0.2) 40%);
 }
+
+.hero-text-box {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  width: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.header-svg {
+  top: 50%;
+  right: 3%;
+  position: absolute;
+  transform: translate(0%, -50%);
+  width: 40%;
+}

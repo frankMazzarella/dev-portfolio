@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -13,7 +11,7 @@ var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 var ExtractTextPluginConfig = new ExtractTextPlugin('style.css');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/js/index.js',
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js'

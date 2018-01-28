@@ -4,7 +4,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/src/index.html',
   filename: 'index.html',
-  inject: 'body'
+  inject: 'body',
+  favicon: __dirname + '/src/favicon.ico',
 });
 
 var ExtractTextPluginConfig = new ExtractTextPlugin('style.css');
@@ -13,7 +14,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname + '/dist',
-    filename: 'app.bundle.js'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [

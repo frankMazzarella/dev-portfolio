@@ -14,3 +14,6 @@ const newArr = arr.map((el) => {
   return el * 2;
 });
 console.log(newArr);
+
+
+// TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something

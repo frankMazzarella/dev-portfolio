@@ -26,13 +26,13 @@ header {
 }
 
 .header-svg {
-  top: 275px;
+  top: 25%;
   right: 4%;
   position: absolute;
-  width: 600px;
+  width: 40%;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1440px) {
   .header-svg {
     width: 500px;
     top: 300px;
@@ -70,7 +70,7 @@ header {
   .hero-text-box {
     left: 0;
     width: 70%;
-    top: 10%;
+    top: 7%;
     transform: translate(0, 0);
     margin: 0 auto;
     position: relative;

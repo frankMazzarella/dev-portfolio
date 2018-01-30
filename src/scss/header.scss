@@ -29,7 +29,14 @@ header {
   top: 275px;
   right: 4%;
   position: absolute;
-  width: 500px;
+  width: 600px;
+}
+
+@media only screen and (max-width: 1370px) {
+  .header-svg {
+    width: 500px;
+    top: 300px;
+  }
 }
 
 @media only screen and (max-width: 1130px) {

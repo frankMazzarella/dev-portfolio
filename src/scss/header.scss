@@ -23,6 +23,10 @@ header {
   left: 4%;
   width: 50%;
   transform: translate(0, -50%);
+
+  a {
+    font-size: 120%;
+  }
 }
 
 .header-svg {
@@ -30,12 +34,13 @@ header {
   right: 4%;
   position: absolute;
   width: 40%;
+  max-width: 700px;
 }
 
 @media only screen and (max-width: 1440px) {
   .header-svg {
     width: 500px;
-    top: 300px;
+    top: 33%;
   }
 }
 
@@ -77,6 +82,28 @@ header {
     text-align: center;
   }
 
+  header {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    font-size: 100%;
+  }
+
+  a {
+    font-size: 120%;
+  }
+
+  .header-svg {
+    top: 50%;
+    width: 80%;
+    max-height: 30%;
+  }
+}
+
+@media only screen and (max-width: 780px) {
   header {
     font-size: 80%;
   }

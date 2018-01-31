@@ -1,6 +1,6 @@
 {
   "name": "dev-portfolio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Developer portfolio for Frank Mazzarella",
   "main": "webpack.config.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "eslint-config-airbnb-base": "12.0.1",
     "eslint-plugin-import": "2.7.0",
     "extract-text-webpack-plugin": "1.0.1",
+    "firebase-tools": "3.17.4",
     "html-webpack-plugin": "2.22.0",
     "node-sass": "3.8.0",
     "sass-loader": "4.0.0",

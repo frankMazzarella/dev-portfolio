@@ -1,6 +1,6 @@
 {
   "name": "dev-portfolio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Developer portfolio for Frank Mazzarella",
   "main": "webpack.config.js",
   "scripts": {

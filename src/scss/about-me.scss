@@ -4,22 +4,6 @@
     width: 100%;
   }
 
-  h2 {
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  h2:after {
-    display: block;
-    height: 2px;
-    background-color: $orange;
-    content: " ";
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
-    text-align: center;
-  }
-
   .about-box {
     background-color: #fff;
     border-radius: 5px;

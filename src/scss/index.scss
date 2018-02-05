@@ -2,6 +2,7 @@
 @import './grid.scss';
 @import './colors.scss';
 @import './header.scss';
+@import './about-me.scss';
 @import './buttons.scss';
 // @import './animate.scss';
 
@@ -19,6 +20,19 @@ html, body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .clearfix {

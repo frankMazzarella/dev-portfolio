@@ -13,16 +13,16 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-  background-color: $light-orange;
-  border: 1px solid $light-orange;
+  background-color: $orange;
+  border: 1px solid $orange;
   color: #fff;
   margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid $light-orange;
-  color: $light-orange;
+  border: 1px solid $orange;
+  color: $orange;
 }
 
 .btn:hover,

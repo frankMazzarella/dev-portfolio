@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import './grid.scss';
 @import './colors.scss';
+@import './buttons.scss';
 @import './header.scss';
 @import './about-me.scss';
-@import './buttons.scss';
-// @import './animate.scss';
+@import './skills.scss';
 
 * {
   margin: 0;
@@ -31,7 +31,6 @@ html, body {
   line-height: 145%;
   width: 70%;
   margin-left: 15%;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -64,6 +63,7 @@ h1 {
 .header-text {
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .header-text:after {

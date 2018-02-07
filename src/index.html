@@ -170,7 +170,43 @@
 
   <section id="contact">
     <div class="row">
-      <h2 class="header-text">Hit me up</h2>
+      <h2 class="header-text">Contact</h2>
+    </div>
+    <div class="row">
+      <form action="https://formspree.io/mazzarella.frank@gmail.com" method="post" class="contact-form">
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="name">Name</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="email">Email</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="message">Drop me a line</label>
+          </div>
+          <div class="col span-2-of-3">
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>&nbsp;</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="submit" value="Send it!">
+          </div>
+        </div>
+      </form>
     </div>
   </section>
 

@@ -7,11 +7,11 @@ header {
   color: white;
 }
 
-.name-left {
+.text-top {
   padding: 10px;
 }
 
-.name-bottom {
+.text-bottom {
   padding: 10px;
   position: absolute;
   bottom: 0;
@@ -51,12 +51,12 @@ header {
     background-image: none;
   }
 
-  .name-left {
+  .text-top {
     text-align: center;
     padding-top: 10px;
   }
 
-  .name-bottom {
+  .text-bottom {
     display: block;
     transform: translate(-50%, 0);
     left: 50%;
@@ -109,7 +109,7 @@ header {
     margin: 0 auto;
   }
 
-  .name-left, .name-bottom {
+  .text-top, .text-bottom {
     font-size: 100%;
   }
 

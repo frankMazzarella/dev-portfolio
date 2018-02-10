@@ -1,10 +1,13 @@
 import $ from 'jquery';
+import 'slick-carousel';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
 import '../scss/index.scss';
 
 // TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something
 // TODO: is the animate css lib needed?
+// TODO: consider swapping css grid with this https://github.com/kristoferjoseph/flexboxgrid
+// TODO: add pwa
 
 const $howManyYears = $('#how-many-years');
 
@@ -12,6 +15,7 @@ $(document).ready(() => {
   animatedTyping();
   calculateHowManyYears();
   addAnimations();
+  slickCarousel();
 });
 
 function addAnimations() {
@@ -28,9 +32,18 @@ function calculateHowManyYears() {
 }
 
 function animatedTyping() {
+  // TODO:
   const typed = new Typed('#typed-out', {
     stringsElement: '#header-typed',
     typeSpeed: 40,
     startDelay: 1000,
+  });
+}
+
+function slickCarousel() {
+  $('.carousel').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 10000,
   });
 }

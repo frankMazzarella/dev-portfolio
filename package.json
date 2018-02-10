@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "jquery": "3.3.1",
-    "scrollreveal": "3.3.6"
+    "scrollreveal": "3.3.6",
+    "typed.js": "2.0.6"
   }
 }

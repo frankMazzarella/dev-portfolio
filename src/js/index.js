@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import Particles from 'particlesjs';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
 import '../scss/index.scss';
@@ -17,6 +18,7 @@ $(document).ready(() => {
   addAnimations();
   slickCarousel();
   smoothScrolling();
+  initParticles();
 });
 
 function smoothScrolling() {
@@ -25,6 +27,14 @@ function smoothScrolling() {
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top,
     }, 500);
+  });
+}
+
+function initParticles() {
+  Particles.init({
+    selector: '.particles',
+    connectParticles: true,
+    color: '#36414a',
   });
 }
 
@@ -42,8 +52,8 @@ function calculateHowManyYears() {
 }
 
 function animatedTyping() {
-  // TODO:
-  const typed = new Typed('#typed-out', {
+  // eslint-disable-next-line no-new
+  new Typed('#typed-out', {
     stringsElement: '#header-typed',
     typeSpeed: 40,
     startDelay: 1000,

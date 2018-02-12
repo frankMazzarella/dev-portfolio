@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
-import Particles from 'particlesjs';
+import 'particles.js/particles';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
 import '../scss/index.scss';
@@ -10,6 +10,7 @@ import '../scss/index.scss';
 // TODO: consider swapping css grid with this https://github.com/kristoferjoseph/flexboxgrid
 // TODO: add pwa
 
+const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
 
 $(document).ready(() => {
@@ -31,11 +32,17 @@ function smoothScrolling() {
 }
 
 function initParticles() {
-  Particles.init({
-    selector: '.particles',
-    connectParticles: true,
-    color: '#36414a',
-  });
+  particlesJS.load('particles-js', 'particles.json');
+  // Particles.init({
+  //   selector: '.particles',
+  //   connectParticles: true,
+  //   color: '#36414a',
+  // });
+
+  // const canvas = document.getElementsByClassName('particles')[0];
+  // const div = document.getElementById('workflow');
+  // const dataUrl = canvas.toDataURL();
+  // div.style.background = `url(${dataUrl})`;
 }
 
 function addAnimations() {

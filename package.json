@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "build": "npm run clean && webpack",
-    "release": "npm run lint && npm run clean && webpack -p",
+    "deploy": "npm run lint && npm run clean && webpack -p && firebase deploy",
     "start": "webpack-dev-server --open --inline --port 3000",
     "lint": "eslint ."
   },

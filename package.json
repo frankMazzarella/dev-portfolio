@@ -1,12 +1,12 @@
 {
   "name": "dev-portfolio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Developer portfolio for Frank Mazzarella",
   "main": "webpack.config.js",
   "scripts": {
     "clean": "rm -rf dist/",
     "build": "npm run clean && webpack",
-    "release": "npm run lint && npm run clean && webpack -p",
+    "deploy": "npm run lint && npm run clean && webpack -p && firebase deploy",
     "start": "webpack-dev-server --open --inline --port 3000",
     "lint": "eslint ."
   },
@@ -30,5 +30,12 @@
     "style-loader": "0.13.1",
     "webpack": "1.13.2",
     "webpack-dev-server": "1.15.0"
+  },
+  "dependencies": {
+    "jquery": "3.3.1",
+    "particles.js": "2.0.0",
+    "scrollreveal": "3.3.6",
+    "slick-carousel": "1.8.1",
+    "typed.js": "2.0.6"
   }
 }

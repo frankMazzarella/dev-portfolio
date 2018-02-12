@@ -4,15 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank Mazzarella | JavaScript Developer</title>
+
+  <!-- TODO: this is sloppy -->
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
 
   <header>
-    <object class="header-svg" type="image/svg+xml" data="./devices.svg"></object>
-    <h2 class="name-left">Frank Mazzarella | JavaScript Developer</h2>
-    <h2 class="name-bottom">Scranton Pennsylvania</h2>
+    <object class="header-svg animated" type="image/svg+xml" data="./devices.svg"></object>
+    <h2 class="text-top">Frank Mazzarella | JavaScript Developer</h2>
+    <h2 class="text-bottom">Scranton Pennsylvania</h2>
     <div class="hero-text-box">
-      <h1>Creating products and experiences using modern web technologies.</h1>
+      <div id="header-typed">
+        <h1>Creating products and experiences using modern web technologies.</h1>
+      </div>
+      <h1><span id="typed-out"></span></h1>
       <a class="btn btn-full" href="#about-me">About Me</a>
       <a class="btn btn-ghost" href="./FrankMazzarellaResume.docx">Résumé</a>
     </div>
@@ -20,8 +29,8 @@
 
   <section id="about-me">
     <div class="row">
-      <h2>This is some text about me</h2>
-      <p class="long-copy">
+      <h2 class="header-text">Hi, I'm Frank</h2>
+      <p class="long-copy fade-in">
         This is some text about me, I'm just gonna ramble on for a bit. Dont actually have
         anything interesting to say but I need to simulate some text but I am definitely
         too lazy to google some fake text so I'm just gonna spit some shit out right here.
@@ -29,39 +38,204 @@
     </div>
     <div class="row">
       <div class="col span-1-of-2">
-        <img src="./headshot.jpg">
+        <img src="./headshot.jpg" class="fade-in">
       </div>
       <div class="col span-1-of-2">
-        <div class="about-box">
+        <div class="about-box fade-in">
           <div>
-            <h3>buy me</h3>
-            <p class="plan-price">$150k <span>/ year</span></p>
-            <p class="plan-price-meal">You know you want me</p>
+            <h3>Experience</h3>
+            <p class="years-of-experience"><span id="how-many-years"></span> <span class="small">/ years</span></p>
+            <p class="small-text">but been a nerd since birth</p>
           </div>
           <div>
             <ul>
               <li>BA in Computer Science</li>
-              <li>Angular/Ionic</li>
-              <li>NodeJS/MySQL</li>
-              <li>BA in Computer Science</li>
-              <li>Angular/Ionic</li>
-              <li>NodeJS/MySQL</li>
-              <li>BA in Computer Science</li>
-              <li>Angular/Ionic</li>
-              <li>NodeJS/MySQL</li>
+              <li>Ability to iterate quickly</li>
+              <li>Team oriented</li>
+              <li>Efficient workflow</li>
+              <li>Lead developer</li>
+              <li>Passionate about technology</li>
+              <li>High standards for code quality</li>
             </ul>
           </div>
           <div>
-            <a href="#" class="btn btn-full">Contact me!</a>
+            <a href="#contact" class="btn btn-full contact">Contact Me</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!--
+
+    AIR - WHITE
+    GROUND - BROWN
+    FIRE - RED
+    WATER - BLUE
+
+  -->
+
+  <!-- 1 AIR -->
+  <section id="latest-tech">
+    <div class="row">
+      <h2 class="header-text">Staying on top</h2>
+    </div>
+    <div class="carousel">
+      <div>PWA is cool</div>
+      <div>JWT is secure</div>
+      <div>Webpack powers this site</div>
+    </div>
+  </section>
+
+  <!-- 2 GROUND -->
+  <section id="skills">
+    <div class="row">
+      <h2 class="header-text">Some of my favorite tools</h2>
+    </div>
+    <div class="row">
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./angular.svg"></object>
+        </div>
+        <h3>Angular</h3>
+        <!-- <div class="city-feature">
+          <i class="ion-ios-person icon-small"></i>
+          1600+ happy eaters
+        </div>
+        <div class="city-feature">
+          <i class="ion-ios-star icon-small"></i>
+          60+ top chefs
+        </div>
+        <div class="city-feature">
+          <i class="ion-social-twitter icon-small"></i>
+          <a href="#">@omnifood_lx</a>
+        </div> -->
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./ionic.svg"></object>
+        </div>
+        <h3>Ionic</h3>
+        <!-- <div class="city-feature">
+          <i class="ion-ios-person icon-small"></i>
+          3700+ happy eaters
+        </div>
+        <div class="city-feature">
+          <i class="ion-ios-star icon-small"></i>
+          160+ top chefs
+        </div>
+        <div class="city-feature">
+          <i class="ion-social-twitter icon-small"></i>
+          <a href="#">@omnifood_sf</a>
+        </div> -->
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./nodejs.svg"></object>
+        </div>
+        <h3>NodeJS</h3>
+        <!-- <div class="city-feature">
+          <i class="ion-ios-person icon-small"></i>
+          2300+ happy eaters
+        </div>
+        <div class="city-feature">
+          <i class="ion-ios-star icon-small"></i>
+          110+ top chefs
+        </div>
+        <div class="city-feature">
+          <i class="ion-social-twitter icon-small"></i>
+          <a href="#">@omnifood_berlin</a>
+        </div> -->
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./mysql.svg"></object>
+        </div>
+        <h3>Mysql</h3>
+        <!-- <div class="city-feature">
+          <i class="ion-ios-person icon-small"></i>
+          1200+ happy eaters
+        </div>
+        <div class="city-feature">
+          <i class="ion-ios-star icon-small"></i>
+          50+ top chefs
+        </div>
+        <div class="city-feature">
+          <i class="ion-social-twitter icon-small"></i>
+          <a href="#">@omnifood_london</a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 FIRE -->
+  <section id="why">
+    <div class="row">
+      <h2 class="header-text">Why</h2>
+    </div>
+  </section>
+
+  <!-- 4 WATER -->
+  <!-- integration
+    testing
+    git -->
+  <section id="workflow">
+    <div id="particles-js"></div>
+    <div class="row">
+      <h2 class="header-text">Workflow</h2>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="row">
+      <h2 class="header-text">Contact</h2>
+    </div>
+    <div class="row">
+      <form action="https://formspree.io/mazzarella.frank@gmail.com" method="post" class="contact-form fade-in">
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="name">Name</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="email">Email</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="message">Drop me a line</label>
+          </div>
+          <div class="col span-2-of-3">
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>&nbsp;</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="submit" value="Send it!">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    footer
+    <!-- github
+    contact
+    email
+    resume
+    locaion -->
+  </footer>
 
 </body>
 </html>

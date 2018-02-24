@@ -33,16 +33,6 @@ function smoothScrolling() {
 
 function initParticles() {
   particlesJS.load('particles-js', 'particles.json');
-  // Particles.init({
-  //   selector: '.particles',
-  //   connectParticles: true,
-  //   color: '#36414a',
-  // });
-
-  // const canvas = document.getElementsByClassName('particles')[0];
-  // const div = document.getElementById('workflow');
-  // const dataUrl = canvas.toDataURL();
-  // div.style.background = `url(${dataUrl})`;
 }
 
 function addAnimations() {

@@ -1,0 +1,17 @@
+#skills {
+  .svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  object {
+    position: relative;
+    transform: translate(0, -50%);
+    top: 50%;
+    width: 100%;
+  }
+
+  .tool-text {
+    margin-bottom: 30px;
+  }
+}

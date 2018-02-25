@@ -4,15 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank Mazzarella | JavaScript Developer</title>
+
+  <!-- TODO: this is sloppy -->
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
 
   <header>
-    <object class="header-svg" type="image/svg+xml" data="./devices.svg"></object>
-    <h2 class="name-left">Frank Mazzarella | JavaScript Developer</h2>
-    <h2 class="name-bottom">Scranton Pennsylvania</h2>
-    <div class="hero-text-box">
-      <h1>Creating products and experiences using modern web technologies.</h1>
+    <object class="header-svg animated fade-in" type="image/svg+xml" data="./devices.svg"></object>
+    <h2 class="text-top">Frank Mazzarella | JavaScript Developer</h2>
+    <h2 class="text-bottom">Scranton Pennsylvania</h2>
+    <div class="hero-text-box fade-in">
+      <div id="header-typed">
+        <h1>Creating products and experiences using modern web technologies.</h1>
+      </div>
+      <h1><span id="typed-out"></span></h1>
       <a class="btn btn-full" href="#about-me">About Me</a>
       <a class="btn btn-ghost" href="./FrankMazzarellaResume.docx">Résumé</a>
     </div>
@@ -20,8 +29,8 @@
 
   <section id="about-me">
     <div class="row">
-      <h2>This is some text about me</h2>
-      <p class="long-copy">
+      <h2 class="header-text fade-in">Hi, I'm Frank</h2>
+      <p class="long-copy fade-in">
         This is some text about me, I'm just gonna ramble on for a bit. Dont actually have
         anything interesting to say but I need to simulate some text but I am definitely
         too lazy to google some fake text so I'm just gonna spit some shit out right here.
@@ -29,39 +38,177 @@
     </div>
     <div class="row">
       <div class="col span-1-of-2">
-        <img src="./headshot.jpg">
+        <img src="./headshot.png" class="fade-in">
       </div>
       <div class="col span-1-of-2">
-        <div class="about-box">
+        <div class="about-box fade-in">
           <div>
-            <h3>buy me</h3>
-            <p class="plan-price">$150k <span>/ year</span></p>
-            <p class="plan-price-meal">You know you want me</p>
+            <h3>Experience</h3>
+            <p class="years-of-experience"><span id="how-many-years"></span> <span class="small">/ years</span></p>
+            <p class="small-text">but been a nerd since birth</p>
           </div>
           <div>
             <ul>
               <li>BA in Computer Science</li>
-              <li>Angular/Ionic</li>
-              <li>NodeJS/MySQL</li>
-              <li>BA in Computer Science</li>
-              <li>Angular/Ionic</li>
-              <li>NodeJS/MySQL</li>
-              <li>BA in Computer Science</li>
-              <li>Angular/Ionic</li>
-              <li>NodeJS/MySQL</li>
+              <li>Ability to iterate quickly</li>
+              <li>Team oriented</li>
+              <li>Efficient workflow</li>
+              <li>Lead developer</li>
+              <li>Passionate about technology</li>
+              <li>High standards for code quality</li>
             </ul>
           </div>
           <div>
-            <a href="#" class="btn btn-full">Contact me!</a>
+            <a href="#contact" class="btn btn-full contact">Contact Me</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <section id="latest-tech">
+    <div class="row">
+      <h2 class="header-text fade-in">Staying on top</h2>
+    </div>
+    <div class="carousel fade-in">
+      <div>PWA is cool</div>
+      <div>JWT is secure</div>
+      <div>Webpack powers this site</div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="row">
+      <h2 class="header-text fade-in">Some of my favorite tools</h2>
+    </div>
+    <div class="row">
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./angular.svg"></object>
+        </div>
+        <div class="tool-text">
+          Angular is a feature rich tool for building large enterprise grade single page applications.
+          Enabling the ability to quickly deliver highly-optimized front end bundles to users.
+        </div>
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./ionic.svg"></object>
+        </div>
+        <div class="tool-text">
+          Combining the power of Angular and Cordova, Ionic alleviates the hard work of building
+          native-feeling mobile applications using standard web technologies.
+        </div>
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./nodejs.svg"></object>
+        </div>
+        <div class="tool-text">
+          Server-side JavaScript helps minimize developer fatigue by keeping the tooling familiar
+          throughout the stack while managing to provide blazing fast API response times.
+        </div>
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./mysql.svg"></object>
+        </div>
+        <div class="tool-text">
+          A time proven and familiar approach to managing relational data. MySQL is one of the most
+          widely used open-source DBMS solutions available.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="row">
+      <h2 class="header-text fade-in">Why</h2>
+    </div>
+  </section>
+
+  <!-- integration
+    testing
+    git -->
+  <section id="workflow">
+    <div id="particles-js" class="fade-in"></div>
+    <div class="row">
+      <h2 class="header-text fade-in">Workflow</h2>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+  </section>
+
+  <section id="contact">
+    <div class="row">
+      <h2 class="header-text fade-in">Contact</h2>
+    </div>
+    <div class="row">
+      <form action="https://formspree.io/mazzarella.frank@gmail.com" method="post" class="contact-form fade-in">
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="name">Name</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="email">Email</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="message">Drop me a line</label>
+          </div>
+          <div class="col span-2-of-3">
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label>&nbsp;</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="submit" value="Send it!">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="map">
+    <div id="map-element"></div>
+    <script>
+      function initMap() {
+        var uluru = { lat: 41.4090, lng: -75.6624 };
+        var map = new google.maps.Map(document.getElementById('map-element'), {
+          zoom: 11,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxNZFfNBtSRwGiOXbo1QEjdaZd0a5IjA4&callback=initMap"></script>
+  </section>
+
+  <footer>
+    <div class="row fade-in">
+      Footer!
+      <br><br><br><br><br><br><br><br><br><br>
+      <!-- github
+      contact
+      email
+      resume
+      locaion -->
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -14,10 +14,10 @@
 <body>
 
   <header>
-    <object class="header-svg animated" type="image/svg+xml" data="./devices.svg"></object>
+    <object class="header-svg animated fade-in" type="image/svg+xml" data="./devices.svg"></object>
     <h2 class="text-top">Frank Mazzarella | JavaScript Developer</h2>
     <h2 class="text-bottom">Scranton Pennsylvania</h2>
-    <div class="hero-text-box">
+    <div class="hero-text-box fade-in">
       <div id="header-typed">
         <h1>Creating products and experiences using modern web technologies.</h1>
       </div>
@@ -29,7 +29,7 @@
 
   <section id="about-me">
     <div class="row">
-      <h2 class="header-text">Hi, I'm Frank</h2>
+      <h2 class="header-text fade-in">Hi, I'm Frank</h2>
       <p class="long-copy fade-in">
         This is some text about me, I'm just gonna ramble on for a bit. Dont actually have
         anything interesting to say but I need to simulate some text but I am definitely
@@ -68,9 +68,9 @@
 
   <section id="latest-tech">
     <div class="row">
-      <h2 class="header-text">Staying on top</h2>
+      <h2 class="header-text fade-in">Staying on top</h2>
     </div>
-    <div class="carousel">
+    <div class="carousel fade-in">
       <div>PWA is cool</div>
       <div>JWT is secure</div>
       <div>Webpack powers this site</div>
@@ -79,7 +79,7 @@
 
   <section id="skills">
     <div class="row">
-      <h2 class="header-text">Some of my favorite tools</h2>
+      <h2 class="header-text fade-in">Some of my favorite tools</h2>
     </div>
     <div class="row">
       <div class="col span-1-of-4 box fade-in">
@@ -123,7 +123,7 @@
 
   <section id="why">
     <div class="row">
-      <h2 class="header-text">Why</h2>
+      <h2 class="header-text fade-in">Why</h2>
     </div>
   </section>
 
@@ -131,16 +131,16 @@
     testing
     git -->
   <section id="workflow">
-    <div id="particles-js"></div>
+    <div id="particles-js" class="fade-in"></div>
     <div class="row">
-      <h2 class="header-text">Workflow</h2>
+      <h2 class="header-text fade-in">Workflow</h2>
     </div>
     <br><br><br><br><br><br><br><br><br><br>
   </section>
 
   <section id="contact">
     <div class="row">
-      <h2 class="header-text">Contact</h2>
+      <h2 class="header-text fade-in">Contact</h2>
     </div>
     <div class="row">
       <form action="https://formspree.io/mazzarella.frank@gmail.com" method="post" class="contact-form fade-in">
@@ -181,7 +181,9 @@
   </section>
 
   <section id="map">
-    <div id="map-element"></div>
+    <div class="fade-in">
+      <div id="map-element"></div>
+    </div>
     <script>
       function initMap() {
         var uluru = { lat: 41.4090, lng: -75.6624 };

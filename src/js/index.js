@@ -36,8 +36,9 @@ function initParticles() {
 }
 
 function addAnimations() {
-  const sr = ScrollReveal();
-  sr.reveal('.fade-in'); // TODO: fine tune me
+  // available options: https://github.com/jlmakes/scrollreveal
+  const fadeIn = ScrollReveal({ viewFactor: 0.4 });
+  fadeIn.reveal('.fade-in');
 }
 
 function calculateHowManyYears() {

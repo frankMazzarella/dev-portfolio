@@ -38,7 +38,7 @@ header {
     top: 50%;
     left: 4%;
     width: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -50%) !important;
 
     a {
       font-size: 120%;
@@ -51,7 +51,7 @@ header {
     position: absolute;
     width: 40%;
     max-width: 700px;
-    transform: translate(0, -50%);
+    transform: translate(0, -50%) !important;
   }
 
   @media only screen and (max-width: 1440px) {

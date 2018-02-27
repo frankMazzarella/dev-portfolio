@@ -3,35 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Frank Mazzarella | JavaScript Developer</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Frank Mazzarella">
-  <meta name="apple-mobile-web-app-title" content="Frank Mazzarella">
-  <meta name="theme-color" content="#eb7d1d">
-  <meta name="msapplication-navbutton-color" content="#eb7d1d">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="msapplication-starturl" content="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="favicon.ico">
 
-  <!-- TODO: this is sloppy -->
+  <!-- TODO: this is sloppy. these files wont cache with service worker -->
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-
-  <script>
-    if (!navigator.serviceWorker.controller) {
-      navigator.serviceWorker
-        .register('service-worker.js', { scope: './' })
-        .then(function(reg) {
-        console.log('Service worker has been registered for scope:'+ reg.scope);
-      });
-    }
-  </script>
-
 </head>
 <body>
 

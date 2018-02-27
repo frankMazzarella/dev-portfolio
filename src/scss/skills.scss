@@ -1,7 +1,11 @@
 #skills {
+  margin-bottom: 30px;
+
   .svg {
     width: 200px;
     height: 200px;
+    display: block;
+    margin: 0 auto;
   }
 
   object {
@@ -12,6 +16,8 @@
   }
 
   .tool-text {
+    width: 250px;
     margin-bottom: 30px;
+    margin: 0 auto;
   }
 }

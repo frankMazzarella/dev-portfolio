@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank Mazzarella | JavaScript Developer</title>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Frank Mazzarella">
+  <meta name="apple-mobile-web-app-title" content="Frank Mazzarella">
+  <meta name="theme-color" content="#eb7d1d">
+  <meta name="msapplication-navbutton-color" content="#eb7d1d">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
 
-  <!-- TODO: this is sloppy -->
+  <!-- TODO: this is sloppy. these files wont cache with service worker -->
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
   <!-- Add the slick-theme.css if you want default styling -->
@@ -14,7 +25,7 @@
 <body>
 
   <header>
-    <object class="header-svg animated fade-in" type="image/svg+xml" data="./devices.svg"></object>
+    <object class="header-svg animated fade-in" type="image/svg+xml" data="./img/devices.svg"></object>
     <h2 class="text-top">Frank Mazzarella | JavaScript Developer</h2>
     <h2 class="text-bottom">Scranton Pennsylvania</h2>
     <div class="hero-text-box fade-in">
@@ -38,7 +49,7 @@
     </div>
     <div class="row">
       <div class="col span-1-of-2">
-        <img src="./headshot.png" class="fade-in">
+        <img src="./img/headshot.png" class="fade-in">
       </div>
       <div class="col span-1-of-2">
         <div class="about-box fade-in">
@@ -84,7 +95,7 @@
     <div class="row">
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
-          <object type="image/svg+xml" data="./angular.svg"></object>
+          <object type="image/svg+xml" data="./img/angular.svg"></object>
         </div>
         <div class="tool-text">
           Angular is a feature rich tool for building large enterprise grade single page applications.
@@ -93,7 +104,7 @@
       </div>
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
-          <object type="image/svg+xml" data="./ionic.svg"></object>
+          <object type="image/svg+xml" data="./img/ionic.svg"></object>
         </div>
         <div class="tool-text">
           Combining the power of Angular and Cordova, Ionic alleviates the hard work of building
@@ -102,7 +113,7 @@
       </div>
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
-          <object type="image/svg+xml" data="./nodejs.svg"></object>
+          <object type="image/svg+xml" data="./img/nodejs.svg"></object>
         </div>
         <div class="tool-text">
           Server-side JavaScript helps minimize developer fatigue by keeping the tooling familiar
@@ -111,7 +122,7 @@
       </div>
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
-          <object type="image/svg+xml" data="./mysql.svg"></object>
+          <object type="image/svg+xml" data="./img/mysql.svg"></object>
         </div>
         <div class="tool-text">
           A time proven and familiar approach to managing relational data. MySQL is one of the most
@@ -180,6 +191,7 @@
     </div>
   </section>
 
+  <!-- TODO: drop google map use something open source and clean -->
   <section id="map">
     <div id="map-element"></div>
     <script>

@@ -9,6 +9,9 @@ import '../scss/index.scss';
 // TODO: is the animate css lib needed?
 // TODO: consider swapping css grid with this https://github.com/kristoferjoseph/flexboxgrid
 // TODO: add pwa
+// TODO: add schema
+// TODO: lighthouse testing
+// TODO: replace google map with open map box because network rape and tracking
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
@@ -37,7 +40,8 @@ function initParticles() {
 
 function addAnimations() {
   // available options: https://github.com/jlmakes/scrollreveal
-  const fadeIn = ScrollReveal({ viewFactor: 0.4 });
+  const options = { viewFactor: 0.4 };
+  const fadeIn = ScrollReveal(options);
   fadeIn.reveal('.fade-in');
 }
 

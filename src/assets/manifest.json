@@ -1,0 +1,13 @@
+{
+  "name": "Frank Mazzarella | Javascript Developer",
+  "short_name": "Frank Mazzarella",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#eb7d1d",
+  "icons": [
+    {
+      "src": "favicon.ico"
+    }
+  ]
+}

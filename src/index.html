@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank Mazzarella | JavaScript Developer</title>
 
-  <!-- TODO: this is sloppy -->
+  <!-- TODO: this is sloppy. these files wont cache with service worker -->
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
   <!-- Add the slick-theme.css if you want default styling -->
@@ -182,9 +181,7 @@
 
   <!-- TODO: drop google map use something open source and clean -->
   <section id="map">
-    <div class="fade-in">
-      <div id="map-element"></div>
-    </div>
+    <div id="map-element"></div>
     <script>
       function initMap() {
         var uluru = { lat: 41.4090, lng: -75.6624 };
@@ -202,13 +199,15 @@
   </section>
 
   <footer>
-    Footer!
-    <br><br><br><br><br><br><br><br><br><br>
-    <!-- github
-    contact
-    email
-    resume
-    locaion -->
+    <div class="row fade-in">
+      Footer!
+      <br><br><br><br><br><br><br><br><br><br>
+      <!-- github
+      contact
+      email
+      resume
+      locaion -->
+    </div>
   </footer>
 
 </body>

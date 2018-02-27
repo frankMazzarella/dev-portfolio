@@ -8,7 +8,7 @@ import '../scss/index.scss';
 // TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something
 // TODO: is the animate css lib needed?
 // TODO: consider swapping css grid with this https://github.com/kristoferjoseph/flexboxgrid
-// TODO: add pwa
+// TODO: add manifest json
 // TODO: add schema
 // TODO: lighthouse testing
 // TODO: replace google map with open map box because network rape and tracking
@@ -23,7 +23,20 @@ $(document).ready(() => {
   slickCarousel();
   smoothScrolling();
   initParticles();
+  initServiceWorker();
 });
+
+function initServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').then((registration) => {
+        console.log('SW registered: ', registration);
+      }).catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
+      });
+    });
+  }
+}
 
 function smoothScrolling() {
   $(document).on('click', 'a[href^="#"]', function smoothScroll(event) {

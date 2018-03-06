@@ -15,9 +15,11 @@ import '../scss/index.scss';
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
+const $headerFade = $('.header-fade');
 
 $(document).ready(() => {
   animatedTyping();
+  initHeaderFade();
   calculateHowManyYears();
   addAnimations();
   slickCarousel();
@@ -25,6 +27,16 @@ $(document).ready(() => {
   initParticles();
   initServiceWorker();
 });
+
+function initHeaderFade() {
+  const scroll = $(window).scrollTop();
+  $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
+  $headerFade.show();
+  $(window).scroll(() => {
+    const scroll = $(window).scrollTop();
+    $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
+  });
+}
 
 function initServiceWorker() {
   if ('serviceWorker' in navigator) {
@@ -43,7 +55,7 @@ function smoothScrolling() {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top,
-    }, 500);
+    }, 1250);
   });
 }
 

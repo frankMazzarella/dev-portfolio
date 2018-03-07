@@ -11,6 +11,32 @@ header {
     display: none;
   }
 
+  .scroll-arrow {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 60px;
+  }
+
+  .scroll-arrow span:hover {
+    border-left: 2px solid $orange;
+    border-bottom: 2px solid $orange;
+    transition: border-left 0.4s, border 0.4s;
+    transition: border-bottom 0.4s, border 0.4s;
+  }
+
+  .scroll-arrow span {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: border-left 0.4s, border 0.4s;
+    transition: border-bottom 0.4s, border 0.4s;
+    transform: rotate(-45deg);
+    animation: bounce 3s infinite;
+  }
+
   .typed-cursor {
     opacity: 1;
     animation: blink .7s infinite;
@@ -152,6 +178,18 @@ header {
 
     header {
       font-size: 70%;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+      transform: rotate(-45deg) translate(0, 0);
     }
   }
 }

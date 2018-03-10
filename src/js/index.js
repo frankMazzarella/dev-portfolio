@@ -12,6 +12,7 @@ import '../scss/index.scss';
 // TODO: add schema
 // TODO: lighthouse testing
 // TODO: replace google map with open map box because network rape and tracking
+// TODO: make decision about firebase tools in dev dependency
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');

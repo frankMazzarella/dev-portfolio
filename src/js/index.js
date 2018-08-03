@@ -13,6 +13,7 @@ import '../scss/index.scss';
 // TODO: add schema
 // TODO: lighthouse testing
 // TODO: make decision about firebase tools in dev dependency
+// TODO: add rimraf to the npm clean script for the windows ppl
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');

@@ -99,9 +99,9 @@ function initSlickCarousel() {
 
 function initMap() {
   const map = Leaflet.map('map-element', { scrollWheelZoom: false });
-  map.setView([41.4090, -75.6624], 11);
-  const attribution = 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
-  const tiles = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  map.setView([41.4090, -75.6624], 14);
+  const attribution = 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.';
+  const tiles = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png';
   const layer = Leaflet.tileLayer(tiles, { attribution, maxZoom: 18 });
   layer.addTo(map);
 }

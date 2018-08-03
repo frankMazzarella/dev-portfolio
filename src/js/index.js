@@ -3,6 +3,7 @@ import 'slick-carousel';
 import 'particles.js/particles';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
+import Leaflet from 'leaflet';
 import '../scss/index.scss';
 
 // TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something
@@ -11,7 +12,6 @@ import '../scss/index.scss';
 // TODO: add manifest json
 // TODO: add schema
 // TODO: lighthouse testing
-// TODO: replace google map with open map box because network rape and tracking
 // TODO: make decision about firebase tools in dev dependency
 
 const particlesJS = window.particlesJS;
@@ -23,9 +23,10 @@ $(document).ready(() => {
   initHeaderFade();
   calculateHowManyYears();
   addAnimations();
-  slickCarousel();
+  initSlickCarousel();
   smoothScrolling();
   initParticles();
+  initMap();
   initServiceWorker();
 });
 
@@ -88,10 +89,19 @@ function animatedTyping() {
   });
 }
 
-function slickCarousel() {
+function initSlickCarousel() {
   $('.carousel').slick({
     dots: true,
     autoplay: true,
     autoplaySpeed: 10000,
   });
+}
+
+function initMap() {
+  const map = Leaflet.map('map-element', { scrollWheelZoom: false });
+  map.setView([41.4090, -75.6624], 11);
+  const attribution = 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
+  const tiles = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const layer = Leaflet.tileLayer(tiles, { attribution, maxZoom: 18 });
+  layer.addTo(map);
 }

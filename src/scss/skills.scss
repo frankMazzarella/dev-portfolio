@@ -22,9 +22,14 @@
     margin: 0 auto;
   }
 
-  #particles-js{
+  #particles-js {
     position: absolute;
     height: 100%;
     width: 100%;
+  }
+
+  .text-glow {
+    background-color: $background-color;
+    box-shadow: 0 0 100px $background-color;
   }
 }

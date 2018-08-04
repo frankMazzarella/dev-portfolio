@@ -14,6 +14,7 @@ import '../scss/index.scss';
 // TODO: lighthouse testing
 // TODO: make decision about firebase tools in dev dependency
 // TODO: add rimraf to the npm clean script for the windows ppl
+// TODO: font should be bundled
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
@@ -44,11 +45,9 @@ function initHeaderFade() {
 function initServiceWorker() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').then((registration) => {
-        console.log('SW registered: ', registration);
-      }).catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => console.log('SW registered: ', registration))
+        .catch(registrationError => console.log('SW registration failed: ', registrationError));
     });
   }
 }

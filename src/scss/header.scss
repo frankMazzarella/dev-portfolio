@@ -1,10 +1,41 @@
 header {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 125vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-image: linear-gradient(135deg, $dark-gray 60%, rgba(0, 0, 0, 0.2) 40%);
+  background-attachment: fixed;
   color: white;
+
+  .header-fade {
+    display: none;
+  }
+
+  .scroll-arrow {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 60px;
+  }
+
+  .scroll-arrow span:hover {
+    border-left: 2px solid $orange;
+    border-bottom: 2px solid $orange;
+    transition: border-left 0.4s, border 0.4s;
+    transition: border-bottom 0.4s, border 0.4s;
+  }
+
+  .scroll-arrow span {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: border-left 0.4s, border 0.4s;
+    transition: border-bottom 0.4s, border 0.4s;
+    transform: rotate(-45deg);
+    animation: bounce 3s infinite;
+  }
 
   .typed-cursor {
     opacity: 1;
@@ -25,16 +56,17 @@ header {
 
   .text-top {
     padding: 10px;
+    position: fixed;
   }
 
   .text-bottom {
     padding: 10px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
 
   .hero-text-box {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 4%;
     width: 50%;
@@ -48,7 +80,7 @@ header {
   .header-svg {
     top: 50%;
     right: 4%;
-    position: absolute;
+    position: fixed;
     width: 40%;
     max-width: 700px;
     transform: translate(0, -50%) !important;
@@ -91,7 +123,7 @@ header {
       left: 0;
       width: 70%;
       top: 7%;
-      transform: translate(0, 0);
+      transform: translate(0, 0) !important;
       margin: 0 auto;
       position: relative;
       text-align: center;
@@ -148,5 +180,16 @@ header {
       font-size: 70%;
     }
   }
-}
 
+  @keyframes bounce {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+  }
+}

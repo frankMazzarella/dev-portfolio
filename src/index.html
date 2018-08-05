@@ -17,6 +17,7 @@
   <link rel="apple-touch-icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
 
   <!-- TODO: this is sloppy. these files wont cache with service worker -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" />
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
   <!-- Add the slick-theme.css if you want default styling -->
@@ -25,16 +26,19 @@
 <body>
 
   <header>
-    <object class="header-svg animated fade-in" type="image/svg+xml" data="./img/devices.svg"></object>
-    <h2 class="text-top">Frank Mazzarella | JavaScript Developer</h2>
-    <h2 class="text-bottom">Scranton Pennsylvania</h2>
-    <div class="hero-text-box fade-in">
+    <object class="header-svg animated fade-in header-fade" type="image/svg+xml" data="./img/devices.svg"></object>
+    <h2 class="text-top header-fade">Frank Mazzarella | JavaScript Developer</h2>
+    <h2 class="text-bottom header-fade">Scranton Pennsylvania</h2>
+    <div class="hero-text-box fade-in header-fade">
       <div id="header-typed">
         <h1>Creating products and experiences using modern web technologies.</h1>
       </div>
       <h1><span id="typed-out"></span></h1>
       <a class="btn btn-full" href="#about-me">About Me</a>
       <a class="btn btn-ghost" href="./FrankMazzarellaResume.docx">Résumé</a>
+    </div>
+    <div class="scroll-arrow header-fade">
+      <a href="#about-me"><span></span></a>
     </div>
   </header>
 
@@ -79,43 +83,43 @@
 
   <section id="latest-tech">
     <div class="row">
-      <h2 class="header-text fade-in">Staying on top</h2>
-    </div>
-    <div class="carousel fade-in">
-      <div>PWA is cool</div>
-      <div>JWT is secure</div>
-      <div>Webpack powers this site</div>
+      <div class="carousel fade-in">
+        <div>slide one</div>
+        <div>slide two</div>
+        <div>slide three</div>
+      </div>
     </div>
   </section>
 
   <section id="skills">
+    <div id="particles-js" class="fade-in"></div>
     <div class="row">
-      <h2 class="header-text fade-in">Some of my favorite tools</h2>
+      <h2 class="header-text fade-in"><span class="text-glow">Some of my favorite tools</span></h2>
     </div>
     <div class="row">
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
-          <object type="image/svg+xml" data="./img/angular.svg"></object>
+          <object type="image/svg+xml" data="./img/docker.svg"></object>
         </div>
-        <div class="tool-text">
-          Angular is a feature rich tool for building large enterprise grade single page applications.
-          Enabling the ability to quickly deliver highly-optimized front end bundles to users.
+        <div class="tool-text text-glow">
+          Docker is a container system that provides OS level virtualization. This allows developers
+          to build applications in an environment that exactly mirrors production.
         </div>
       </div>
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
-          <object type="image/svg+xml" data="./img/ionic.svg"></object>
+          <object type="image/svg+xml" data="./img/express.svg"></object>
         </div>
-        <div class="tool-text">
-          Combining the power of Angular and Cordova, Ionic alleviates the hard work of building
-          native-feeling mobile applications using standard web technologies.
+        <div class="tool-text text-glow">
+          Express has earned its reputation as the de facto standard for creating web apps
+          using Node. Express helps developers organize their code into an MVC structure on the server.
         </div>
       </div>
       <div class="col span-1-of-4 box fade-in">
         <div class="svg">
           <object type="image/svg+xml" data="./img/nodejs.svg"></object>
         </div>
-        <div class="tool-text">
+        <div class="tool-text text-glow">
           Server-side JavaScript helps minimize developer fatigue by keeping the tooling familiar
           throughout the stack while managing to provide blazing fast API response times.
         </div>
@@ -124,29 +128,50 @@
         <div class="svg">
           <object type="image/svg+xml" data="./img/mysql.svg"></object>
         </div>
-        <div class="tool-text">
+        <div class="tool-text text-glow">
           A time proven and familiar approach to managing relational data. MySQL is one of the most
           widely used open-source DBMS solutions available.
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="why">
     <div class="row">
-      <h2 class="header-text fade-in">Why</h2>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./img/ionic.svg"></object>
+        </div>
+        <div class="tool-text text-glow">
+          Combining the power of Angular and Cordova, Ionic alleviates the hard work of building
+          native-feeling mobile applications using standard web technologies.
+        </div>
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./img/angular.svg"></object>
+        </div>
+        <div class="tool-text text-glow">
+          Angular is a feature rich framework for building large scale, enterprise grade, single page applications.
+          Enabling the ability to quickly deliver highly-optimized front end bundles to users.
+        </div>
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./img/jwt.svg"></object>
+        </div>
+        <div class="tool-text text-glow">
+          JSON Web Tokens are a standard that describe how to securely transfer data over the web. Tokens are signed
+          by the server making them a great way to represent authentication.
+        </div>
+      </div>
+      <div class="col span-1-of-4 box fade-in">
+        <div class="svg">
+          <object type="image/svg+xml" data="./img/typescript.svg"></object>
+        </div>
+        <div class="tool-text text-glow">
+          TypeScript is a superset of JavaScript that adds support for optional types, classes, and interfaces.
+          It transpiles down into vanilla JS and can be used anywhere.
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- integration
-    testing
-    git -->
-  <section id="workflow">
-    <div id="particles-js" class="fade-in"></div>
-    <div class="row">
-      <h2 class="header-text fade-in">Workflow</h2>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br>
   </section>
 
   <section id="contact">
@@ -191,23 +216,8 @@
     </div>
   </section>
 
-  <!-- TODO: drop google map use something open source and clean -->
   <section id="map">
-    <div id="map-element"></div>
-    <script>
-      function initMap() {
-        var uluru = { lat: 41.4090, lng: -75.6624 };
-        var map = new google.maps.Map(document.getElementById('map-element'), {
-          zoom: 11,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxNZFfNBtSRwGiOXbo1QEjdaZd0a5IjA4&callback=initMap"></script>
+    <div id="map-element" class="fade-in"></div>
   </section>
 
   <footer>

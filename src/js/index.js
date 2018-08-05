@@ -3,6 +3,7 @@ import 'slick-carousel';
 import 'particles.js/particles';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
+import Leaflet from 'leaflet';
 import '../scss/index.scss';
 
 // TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something
@@ -11,29 +12,42 @@ import '../scss/index.scss';
 // TODO: add manifest json
 // TODO: add schema
 // TODO: lighthouse testing
-// TODO: replace google map with open map box because network rape and tracking
+// TODO: make decision about firebase tools in dev dependency
+// TODO: add rimraf to the npm clean script for the windows ppl
+// TODO: font should be bundled
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
+const $headerFade = $('.header-fade');
 
 $(document).ready(() => {
   animatedTyping();
+  initHeaderFade();
   calculateHowManyYears();
   addAnimations();
-  slickCarousel();
+  initSlickCarousel();
   smoothScrolling();
   initParticles();
+  initMap();
   initServiceWorker();
 });
+
+function initHeaderFade() {
+  const scroll = $(window).scrollTop();
+  $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
+  $headerFade.show();
+  $(window).scroll(() => {
+    const scroll = $(window).scrollTop();
+    $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
+  });
+}
 
 function initServiceWorker() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js').then((registration) => {
-        console.log('SW registered: ', registration);
-      }).catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => console.log('SW registered: ', registration))
+        .catch(registrationError => console.log('SW registration failed: ', registrationError));
     });
   }
 }
@@ -43,7 +57,7 @@ function smoothScrolling() {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top,
-    }, 500);
+    }, 1250);
   });
 }
 
@@ -75,10 +89,19 @@ function animatedTyping() {
   });
 }
 
-function slickCarousel() {
+function initSlickCarousel() {
   $('.carousel').slick({
     dots: true,
     autoplay: true,
     autoplaySpeed: 10000,
   });
+}
+
+function initMap() {
+  const map = Leaflet.map('map-element', { scrollWheelZoom: false });
+  map.setView([41.4090, -75.6624], 14);
+  const attribution = 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.';
+  const tiles = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png';
+  const layer = Leaflet.tileLayer(tiles, { attribution, maxZoom: 18 });
+  layer.addTo(map);
 }

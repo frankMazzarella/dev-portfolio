@@ -1,7 +1,13 @@
 #skills {
+  margin-bottom: 30px;
+  position: relative;
+
   .svg {
     width: 200px;
     height: 200px;
+    display: block;
+    padding: 15px;
+    margin: 0 auto;
   }
 
   object {
@@ -12,6 +18,19 @@
   }
 
   .tool-text {
+    width: 250px;
     margin-bottom: 30px;
+    margin: 0 auto;
+  }
+
+  #particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .text-glow {
+    background-color: $background-color;
+    box-shadow: 0 0 100px $background-color;
   }
 }

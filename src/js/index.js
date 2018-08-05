@@ -29,16 +29,16 @@ function initHeaderFade() {
   $headerFade.show();
   $(window).scroll(() => {
     const scroll = $(window).scrollTop();
-    $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
+    if (scroll < 150) {
+      $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
+    }
   });
 }
 
 function initServiceWorker() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => console.log('SW registered: ', registration))
-        .catch(registrationError => console.log('SW registration failed: ', registrationError));
+      navigator.serviceWorker.register('/sw.js');
     });
   }
 }

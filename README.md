@@ -11,3 +11,14 @@ Development portfolio for Frank Mazzarella
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) { }
+
+
+// TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something
+// TODO: is the animate css lib needed?
+// TODO: consider swapping css grid with this https://github.com/kristoferjoseph/flexboxgrid
+// TODO: add manifest json
+// TODO: add schema
+// TODO: lighthouse testing
+// TODO: make decision about firebase tools in dev dependency
+// TODO: add rimraf to the npm clean script for the windows ppl
+// TODO: font should be bundled

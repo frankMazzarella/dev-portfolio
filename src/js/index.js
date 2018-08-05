@@ -4,17 +4,8 @@ import 'particles.js/particles';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
 import Leaflet from 'leaflet';
+import MobileDetect from 'mobile-detect';
 import '../scss/index.scss';
-
-// TODO: there is an issue with babel. it wants to replace es2015 with 'env'. do something
-// TODO: is the animate css lib needed?
-// TODO: consider swapping css grid with this https://github.com/kristoferjoseph/flexboxgrid
-// TODO: add manifest json
-// TODO: add schema
-// TODO: lighthouse testing
-// TODO: make decision about firebase tools in dev dependency
-// TODO: add rimraf to the npm clean script for the windows ppl
-// TODO: font should be bundled
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
@@ -98,7 +89,9 @@ function initSlickCarousel() {
 }
 
 function initMap() {
-  const map = Leaflet.map('map-element', { scrollWheelZoom: false });
+  const mobileDetect = new MobileDetect(window.navigator.userAgent);
+  const dragging = !mobileDetect.mobile();
+  const map = Leaflet.map('map-element', { dragging, scrollWheelZoom: false });
   map.setView([41.4090, -75.6624], 14);
   const attribution = 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.';
   const tiles = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png';

@@ -59,13 +59,14 @@ function initParticles() {
 }
 
 function addAnimations() {
-  // available options: https://github.com/jlmakes/scrollreveal
+  // TODO: available options: https://github.com/jlmakes/scrollreveal
   const options = { viewFactor: 0.4 };
   const fadeIn = ScrollReveal(options);
   fadeIn.reveal('.fade-in');
 }
 
 function calculateHowManyYears() {
+  // TODO: this _could_ be more accurate but its not worth another lib. make decision when polishing if this is okay
   const startDate = Date.parse('Feb 1, 2016');
   const now = new Date().getTime();
   const oneYear = 1000 * 60 * 60 * 24 * 365;

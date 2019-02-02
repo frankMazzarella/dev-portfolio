@@ -9,6 +9,7 @@ import '../scss/index.scss';
 
 const particlesJS = window.particlesJS;
 const $howManyYears = $('#how-many-years');
+const $thisYear = $('#this-year');
 const $headerFade = $('.header-fade');
 
 $(document).ready(() => {
@@ -20,6 +21,7 @@ $(document).ready(() => {
   smoothScrolling();
   initParticles();
   initMap();
+  displayThisYearInFooter();
   initServiceWorker();
 });
 
@@ -97,4 +99,9 @@ function initMap() {
   const tiles = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png';
   const layer = Leaflet.tileLayer(tiles, { attribution, maxZoom: 18 });
   layer.addTo(map);
+}
+
+function displayThisYearInFooter() {
+  const thisYear = new Date().getFullYear();
+  $thisYear.text(thisYear);
 }

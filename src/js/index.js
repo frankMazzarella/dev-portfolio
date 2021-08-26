@@ -12,7 +12,7 @@ const $howManyYears = $('#how-many-years');
 const $thisYear = $('#this-year');
 const $headerFade = $('.header-fade');
 
-$(document).ready(() => {
+$(() => {
   animatedTyping();
   initHeaderFade();
   calculateHowManyYears();
@@ -29,11 +29,9 @@ function initHeaderFade() {
   const scroll = $(window).scrollTop();
   $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
   $headerFade.show();
-  $(window).scroll(() => {
+  $(window).on('scroll', () => {
     const scroll = $(window).scrollTop();
-    if (scroll < 150) {
-      $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
-    }
+    $headerFade.css({ opacity: ((100 - scroll) / 100) + 0.1 });
   });
 }
 
